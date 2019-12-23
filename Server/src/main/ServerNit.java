@@ -213,18 +213,7 @@ public class ServerNit extends Thread {
 		return null;
 	}
 	
-	//PROLAZI KROZ LISTU REGISTROVANIH KORISNIKA
-	//I ISPISUJE FAJLOVE ONIH KOJI SU SHARE-OVALI SVOJ DISK ZA JAVNOST
-//	private void viewPublic() {
-//		for (Korisnik k : Server.registrovaniKorisnici) {
-//			if (k.isSharedWithPublic()) {
-//				clientOutput.println(k.getUsername() + ": ");
-//				File folder = new File("C:\\Users\\EMA\\eclipse-workspace\\Server\\Drive\\" + k.getUsername());
-//				viewFiles(folder);
-//			}
-//		}
-//
-//	}
+	//PREGLEDA FAJLOVE TRAZENOG KORISNIKA
 	private void viewPublic() throws IOException {
 		clientOutput.println("Unesi username ciji folder zelis da pogledas");
 		String username = clientInput.readLine();
@@ -240,10 +229,6 @@ public class ServerNit extends Thread {
 
 	}
 	
-	private void viewFiles() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	//NEPRIJAVLJENI KORISNIK DOWNLOADUJE FAJL
 	private void downloadPublic() throws IOException {
